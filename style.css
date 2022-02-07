@@ -12,7 +12,7 @@ html {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #262626;
+  background: #262626;
   display: grid;
   place-items: center;
 }
@@ -23,21 +23,22 @@ html {
   padding: 0 10rem;
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 
 .card {
   width: 30rem;
   height: 55rem;
-  background-color: #eee;
+  background: #eee;
   border-radius: 2.5rem;
-  box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.7);
   position: relative;
 }
 
 .card-top {
   width: 100%;
   height: 50%;
-  background-color: #F1AE04;
+  background: #f1ae04;
   padding: 3rem;
   border-radius: 2.5rem 2.5rem 0 0;
   transition: background 0.5s;
@@ -53,17 +54,38 @@ html {
 }
 
 .card-top-text {
-  color: #FFF;
-  text-transform: 1rem;
+  color: #fff;
+}
+
+.card-top-text h1 {
+  font-weight: 600;
+  text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin-bottom: 1rem;
 }
 
 .shoe-1 {
-  position: absolute;
   width: 30rem;
+  position: absolute;
   top: -2.5rem;
   right: -10rem;
+  transition: transform 1s;
+}
+
+.container.change .shoe-1 {
+  transform: translateX(-50rem) rotateZ(45deg);
+}
+
+.shoe-2 {
+  width: 33rem;
+  position: absolute;
+  top: -10rem;
+  right: -45rem;
+  transition: transform 1s;
+}
+
+.container.change .shoe-2 {
+  transform: translateX(-40rem) rotateZ(-45deg);
 }
 
 .card-bottom {
@@ -75,26 +97,25 @@ html {
 .card-bottom h1 {
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: #333;
   margin-bottom: 0.6rem;
 }
 
-.badge { 
+.badge {
   position: absolute;
   top: 30rem;
   right: 5rem;
   width: 3.5rem;
   height: 1.6rem;
-  background-color: #25D390;
-  color: #FFF;
+  background: #25d390;
+  color: #fff;
   display: grid;
   place-items: center;
   border-radius: 0.3rem;
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -112,6 +133,7 @@ html {
 .stars i:last-child {
   opacity: 0.4;
 }
+
 .size {
   margin-bottom: 3rem;
 }
@@ -128,15 +150,15 @@ html {
 }
 
 .sizes span {
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   margin-right: 2.5rem;
 }
 
 .sizes span:nth-child(3) {
   width: 2rem;
   height: 2rem;
-  background-color: #25D393;
-  color: #FFF;
+  background: #25d393;
+  color: #fff;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -153,11 +175,10 @@ html {
   display: flex;
 }
 
-.color-1, 
+.color-1,
 .color-2 {
   width: 2rem;
   height: 2rem;
-  background-color: red;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -187,6 +208,10 @@ html {
   justify-content: center;
   align-items: center;
   transition: background 0.5s;
+}
+
+.container.change .price {
+  background: #c02244;
 }
 
 .price span {
