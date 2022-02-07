@@ -176,21 +176,23 @@ html {
 }
 
 .color-1,
-.color-2 {
+.color-2,
+.color-3,
+.color-4 {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   cursor: pointer;
+  margin-right: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  border: none;
 }
 
 .color-1 {
-  background: #1c477a;
-  margin-right: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(28, 71, 122, 0.2);
 }
 
 .color-2 {
-  background: #c02244;
   box-shadow: 0 1rem 2rem rgba(192, 34, 68, 0.3);
 }
 
